@@ -65,11 +65,11 @@
             <li class="scroll-to-link" data-target="delete-bet">
                 <a>Delete Bet</a>
             </li>
-            <li class="scroll-to-link" data-target="update-bet">
-                <a>Update Bet</a>
-            </li>
             <li class="scroll-to-link" data-target="get-characters">
                 <a>Get Characters</a>
+            </li>
+            <li class="scroll-to-link" data-target="game-screen-api">
+                <a>Game Screen Api</a>
             </li>
             <!-- <li class="scroll-to-link" data-target="errors">
                 <a>Errors</a>
@@ -264,8 +264,7 @@
                 
                 </tbody>
             </table>
-        </div>
-        
+        </div>  
         <div class="overflow-hidden content-section" id="content-place-bet">
             <h2 id="place-bet">Place Bet</h2>
             <p>
@@ -430,36 +429,13 @@
                 </tbody>
             </table>
         </div>
-        <div class="overflow-hidden content-section" id="content-update-bet">
-            <h2 id="update-bet">Update Bet</h2>
+        <div class="overflow-hidden content-section" id="content-game-screen-api">
+            <h2 id="game-screen-api">Game Screen Api</h2>
             <p>
-                To update a bet you need to make a POST call to the following url :<br>
-                <code class="higlighted">/api/delete_bet</code>
+                Game screen api is accessed via iframe.
             </p>
             <br>
-            <h4>QUERY PARAMETERS</h4>
-            <table>
-                <thead>
-                <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>secret_key</td>
-                    <td>String</td>
-                    <td>Your API key.</td>
-                </tr>
-                <tr>
-                    <td>RUNNING_bet_waiting_id</td>
-                    <td>Number</td>
-                    <td>running bet ID.</td>
-                </tr>
-                
-                </tbody>
-            </table>
+            
         </div>
         <!-- <div class="overflow-hidden content-section" id="content-get-characters">
             <h2 id="get-characters">get characters</h2>
