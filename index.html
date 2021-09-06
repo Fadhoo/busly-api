@@ -38,7 +38,7 @@
             <li class="scroll-to-link active" data-target="get-started">
                 <a>GET STARTED</a>
             </li>
-            <li class="scroll-to-link" data-target="login">
+            <!-- <li class="scroll-to-link" data-target="login">
                 <a>Login</a>
             </li>
             <li class="scroll-to-link" data-target="registration">
@@ -70,7 +70,7 @@
             </li>
             <li class="scroll-to-link" data-target="game-screen-api">
                 <a>Game Screen Api</a>
-            </li>
+            </li> -->
             <!-- <li class="scroll-to-link" data-target="errors">
                 <a>Errors</a>
             </li> -->
@@ -87,14 +87,13 @@
                 The Busly API provides programmatic access to read Busly Game data.
             </p>
             <p>
-                To use this API, you need an <strong>API key</strong>. Please contact us at <a href="mailto:Support@shacksevo.co">Support@shacksevo.co</a> to get your own API key.
+                To use this Iframe, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:Support@shacksevo.co">Support@shacksevo.co</a> to get your own API key.
             </p>
         </div>
-        <div class="overflow-hidden content-section" id="content-registration">
-            <h2 id="registration">Register New User</h2>
+        <div class="overflow-hidden content-section" id="content-game-screen-api">
+            <h2 id="game-screen-api">Game Api</h2>
             <p>
-                To register a new user you need to make a POST call to the following url :<br>
-                <code class="higlighted">register/</code>
+                Game is accessed via iframe src=https://busly-service.centralus.azurecontainer.io/. 
             </p>
             <br>
             <h4>QUERY PARAMETERS</h4>
@@ -108,27 +107,68 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>secret_key</td>
+                        <td>client_key</td>
                         <td>String</td>
                         <td>Your API key.</td>
                     </tr>
                     <tr>
-                        <td>uname</td>
+                        <td>userid</td>
                         <td>String</td>
-                        <td>New unique username.</td>
+                        <td>New unique userid.</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </div>
+        <div class="overflow-hidden content-section" id="content-registration"> -->
+            <h2 id="registration">Verify User</h2>
+            <p>
+                Provide an api to authorize user :<br>
+                <code class="higlighted">returns true if user is allowed to bet and vice versa</code>
+            </p>
+            <br>
+            <h4>PARAMETERS</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>userod</td>
+                        <td>String</td>
+                        <td>Unique user.</td>
                     </tr>
                     <tr>
-                        <td>pw</td>
+                        <td>client seed</td>
                         <td>String</td>
                         <td>
-                            A secure password.
+                            Generated client seed.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Game Round ID</td>
+                        <td>String</td>
+                        <td>
+                            New game round ID.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>stake</td>
+                        <td>Number</td>
+                        <td>
+                            Bet stake.
                         </td>
                     </tr>
                 
                 </tbody>
             </table>
         </div>
-        <div class="overflow-hidden content-section" id="content-login">
+        <!-- <div class="overflow-hidden content-section" id="content-login">
             <h2 id="login">Login</h2>
             <p>
                 To login a user you need to make a POST call to the following url :<br>
@@ -264,8 +304,8 @@
                 
                 </tbody>
             </table>
-        </div>  
-        <div class="overflow-hidden content-section" id="content-place-bet">
+        </div>   -->
+        <!-- <div class="overflow-hidden content-section" id="content-place-bet">
             <h2 id="place-bet">Place Bet</h2>
             <p>
                 To place a bet you need to make a POST call to the following url :<br>
@@ -316,8 +356,8 @@
                 
                 </tbody>
             </table>
-        </div>
-        <div class="overflow-hidden content-section" id="content-event-place-bet">
+        </div> -->
+        <!-- <div class="overflow-hidden content-section" id="content-event-place-bet">
             <h2 id="event-place-bet">Events Place Bet</h2>
             <p>
                 To place an event type bet you need to make a POST call to the following url :<br>
@@ -436,7 +476,7 @@
             </p>
             <br>
             
-        </div>
+        </div>  -->
         <!-- <div class="overflow-hidden content-section" id="content-get-characters">
             <h2 id="get-characters">get characters</h2>
             <p>
