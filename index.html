@@ -116,6 +116,11 @@
                         <td>String</td>
                         <td>New unique userid.</td>
                     </tr>
+                    <tr>
+                        <td>client api</td>
+                        <td>String</td>
+                        <td>Url for api to verify user and update bet status.</td>
+                    </tr>
                 
                 </tbody>
             </table>
@@ -125,7 +130,8 @@
             <h2 id="registration">Verify User</h2>
             <p>
                 Provide an api to authorize user :<br>
-                <code class="higlighted">returns true if user is allowed to bet and vice versa</code>
+                <code class="higlighted">/verify_user</code>
+                <code>returns true if user is allowed to bet and vice versa</code>
             </p>
             <br>
             <h4>PARAMETERS</h4>
@@ -158,7 +164,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>stake</td>
+                        <td>Stake</td>
                         <td>Number</td>
                         <td>
                             Bet stake.
@@ -168,6 +174,7 @@
                 </tbody>
             </table>
         </div>
+        
         <!-- <div class="overflow-hidden content-section" id="content-login">
             <h2 id="login">Login</h2>
             <p>
