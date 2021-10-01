@@ -129,12 +129,12 @@
         <div class="overflow-hidden content-section" id="content-registration"> 
             <h2 id="registration">Verify User</h2>
             <p>
-                Provide an api to authorize user :<br>
-                <code class="higlighted">/verify_user</code>
-                <code>returns true if user is allowed to bet and vice versa</code>
+                Provide an api endpoint to authorize user :<br>
+                <code class="higlighted">{{client_api}}/verify_user</code><br>
+                <code>returns the value "canBet" as true if user is allowed to bet and false if otherwise.</code>
             </p>
             <br>
-            <h4>PARAMETERS</h4>
+            <h4>QUERY PARAMETERS</h4>
             <table>
                 <thead>
                 <tr>
