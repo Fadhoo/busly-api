@@ -31,7 +31,7 @@
 <div class="left-menu">
     <div class="content-logo">
         <img src="images/logo.png" height="32" />
-        <span>Busly API</span>
+        <span>Busly Game</span>
     </div>
     <div class="content-menu">
         <ul>
@@ -84,17 +84,19 @@
         <div class="overflow-hidden content-section" id="content-get-started">
             <h1 id="get-started">Get started</h1>
             <p>
-                The Busly API provides programmatic access to read Busly Game data.
+                The Busly API and Iframe provides programmatic access to Busly Game.
             </p>
             <p>
-                To use this Iframe, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:techsupport@shacksevo.co"> techsupport@shacksevo.co</a> to get your own API key.
+                To use this API and Iframe, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:techsupport@shacksevo.co"> techsupport@shacksevo.co</a> to get your own API key.
             </p>
         </div>
         <div class="overflow-hidden content-section" id="content-game-screen-api">
-            <h2 id="game-screen-api">Game Api</h2>
+            <h2 id="game-screen-api">Game Iframe</h2>
             <p>
-                Game is accessed via iframe src=https://busly-service.centralus.azurecontainer.io/. 
-            </p>
+                Game is accessed via iframe 
+                <code>
+                    :src="'https://busly-service.centralus.azurecontainer.io/?client_id='+YOUR_CLIENT_ID+'&current_user_id='+CURRENT_USER_ID+'&api='+YOUR_API_ENDPOINT"
+                </code> 
             <br>
             <h4>QUERY PARAMETERS</h4>
             <table>
@@ -107,17 +109,17 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>client_key</td>
+                        <td>YOUR_CLIENT_ID</td>
                         <td>String</td>
                         <td>Your API key.</td>
                     </tr>
                     <tr>
-                        <td>userid</td>
+                        <td>CURRENT_USER_ID</td>
                         <td>String</td>
                         <td>New unique userid.</td>
                     </tr>
                     <tr>
-                        <td>client api</td>
+                        <td>YOUR_API_ENDPOINT</td>
                         <td>String</td>
                         <td>Url for api to verify user and update bet status.</td>
                     </tr>
@@ -130,8 +132,8 @@
             <h2 id="registration">Verify User</h2>
             <p>
                 Provide an api endpoint to authorize user :<br>
-                <code class="higlighted">{{client_api}}/verify_user</code><br>
-                <code>returns the value "canBet" as true if user is allowed to bet and false if otherwise.</code>
+                <code>POST</code> <code class="higlighted">{{client_api}}/verify_user</code><br>
+                <p>return the value "canBet" as true if user is allowed to bet and false if otherwise.</p>
             </p>
             <br>
             <h4>QUERY PARAMETERS</h4>
@@ -150,21 +152,21 @@
                         <td>Unique user.</td>
                     </tr>
                     <tr>
-                        <td>client seed</td>
+                        <td>client_seed</td>
                         <td>String</td>
                         <td>
                             Generated client seed.
                         </td>
                     </tr>
                     <tr>
-                        <td>Game Round ID</td>
+                        <td>game_round_ID</td>
                         <td>String</td>
                         <td>
                             New game round ID.
                         </td>
                     </tr>
                     <tr>
-                        <td>Stake</td>
+                        <td>stake</td>
                         <td>Number</td>
                         <td>
                             Bet stake.
@@ -173,6 +175,14 @@
                 
                 </tbody>
             </table>
+        </div>
+        <div class="overflow-hidden content-section" id="content-registration"> 
+            <h2 id="registration">Update User Bet</h2>
+            <p>
+                Provide an api endpoint to update user bet on completion :<br>
+                <code>POST</code> <code class="higlighted">{{client_api}}/update_bet</code><br>
+            </p>
+            <br>
         </div>
     </div>
 </div>
