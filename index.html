@@ -38,42 +38,7 @@
             <li class="scroll-to-link active" data-target="get-started">
                 <a>GET STARTED</a>
             </li>
-            <!-- <li class="scroll-to-link" data-target="login">
-                <a>Login</a>
-            </li>
-            <li class="scroll-to-link" data-target="registration">
-                <a>Register A New User</a>
-            </li>
-            <li class="scroll-to-link" data-target="create-user">
-                <a>Auto Create User</a>
-            </li>
-            <li class="scroll-to-link" data-target="validate-user">
-                <a>Validate User</a>
-            </li>
-            <li class="scroll-to-link" data-target="get-past-odds">
-                <a>Get Past Odds</a>
-            </li>
-            <li class="scroll-to-link" data-target="get-jackpot">
-                <a>Get Jackpot</a>
-            </li>
-            <li class="scroll-to-link" data-target="place-bet">
-                <a>Place Bet</a>
-            </li>
-            <li class="scroll-to-link" data-target="event-place-bet">
-                <a>Place Event Bet</a>
-            </li>
-            <li class="scroll-to-link" data-target="delete-bet">
-                <a>Delete Bet</a>
-            </li>
-            <li class="scroll-to-link" data-target="get-characters">
-                <a>Get Characters</a>
-            </li>
-            <li class="scroll-to-link" data-target="game-screen-api">
-                <a>Game Screen Api</a>
-            </li> -->
-            <!-- <li class="scroll-to-link" data-target="errors">
-                <a>Errors</a>
-            </li> -->
+            
         </ul>
     </div>
 </div>
@@ -84,55 +49,17 @@
         <div class="overflow-hidden content-section" id="content-get-started">
             <h1 id="get-started">Get started</h1>
             <p>
-                The Busly API and Iframe provides programmatic access to Busly Game.
+                The Busly API provides programmatic access to integrate with Busly Game.
             </p>
             <p>
-                To use this API and Iframe, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:techsupport@shacksevo.co"> techsupport@shacksevo.co</a> to get your own API key.
+                To use this API, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:techsupport@shacksevo.co"> techsupport@shacksevo.co</a> to get your own API key.
             </p>
-        </div>
-        <div class="overflow-hidden content-section" id="content-game-screen-api">
-            <h2 id="game-screen-api">Game Iframe</h2>
-            <p>
-                Game is accessed via iframe 
-                <code>
-                    :src="'https://busly-service.centralus.azurecontainer.io/?client_id='+YOUR_CLIENT_ID+'&current_user_id='+CURRENT_USER_ID+'&api='+YOUR_API_ENDPOINT"
-                </code> 
-            <br>
-            <h4>QUERY PARAMETERS</h4>
-            <table>
-                <thead>
-                <tr>
-                    <th>Field</th>
-                    <th>Type</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>YOUR_CLIENT_ID</td>
-                        <td>String</td>
-                        <td>Your API key.</td>
-                    </tr>
-                    <tr>
-                        <td>CURRENT_USER_ID</td>
-                        <td>String</td>
-                        <td>New unique userid.</td>
-                    </tr>
-                    <tr>
-                        <td>YOUR_API_ENDPOINT</td>
-                        <td>String</td>
-                        <td>Url for api to verify user and update bet status.</td>
-                    </tr>
-                
-                </tbody>
-            </table>
-            
         </div>
         <div class="overflow-hidden content-section" id="content-registration"> 
             <h2 id="registration">Verify User</h2>
             <p>
                 Provide an api endpoint to authorize user :<br>
-                <code>POST</code> <code class="higlighted">{{client_api}}/verifyuser</code><br>
+                <code>POST</code> <code class="higlighted">{{your_api_endpoint}}/verifyuser</code><br>
                 <p>return the value "canBet" as true if user is allowed to bet and false if otherwise.</p>
             </p>
             <br>
@@ -147,7 +74,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>userid</td>
+                        <td>username</td>
                         <td>String</td>
                         <td>Unique user.</td>
                     </tr>
@@ -180,7 +107,7 @@
             <h2 id="registration">Update User Bet</h2>
             <p>
                 Provide an api endpoint to update user bet on completion :<br>
-                <code>POST</code> <code class="higlighted">{{client_api}}/update_bet</code><br>
+                <code>POST</code> <code class="higlighted">{{your_api_endpoint}}/update_bet</code><br>
             </p>
             <br>
         </div>
