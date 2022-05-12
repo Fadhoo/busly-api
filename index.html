@@ -55,6 +55,48 @@
                 To use this API, you need a <strong>Client key</strong>. Please contact us at <a href="mailto:techsupport@shacksevo.co"> techsupport@shacksevo.co</a> to get your own API key.
             </p>
         </div>
+        <div class="overflow-hidden content-section" id="content-game-screen-api">
+            <h2 id="game-screen-api">Game Iframe</h2>
+            <p>
+                Game can be accessed via URL
+                <code>
+                   "'GAME_URL'+'&user_name='+CURRENT_USER_NAME+'&api='+YOUR_API_ENDPOINT" 
+                </code> 
+                Or iframe 
+                <code>
+                   :src="'GAME_URL'+'&user_name='+CURRENT_USER_NAME+'&api='+YOUR_API_ENDPOINT" 
+                </code> 
+            <br>
+            <h4>QUERY PARAMETERS</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td>YOUR_CLIENT_ID</td>
+                        <td>String</td>
+                        <td>Your API key.</td>
+                    </tr> -->
+                    <tr>
+                        <td>CURRENT_USER_ID</td>
+                        <td>String</td>
+                        <td>New unique userid.</td>
+                    </tr>
+                    <tr>
+                        <td>YOUR_API_ENDPOINT</td>
+                        <td>String</td>
+                        <td>Url for api to verify user and update bet status.</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            
+        </div>
         <div class="overflow-hidden content-section" id="content-registration"> 
             <h2 id="registration">Verify User</h2>
             <p>
